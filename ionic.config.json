@@ -1,0 +1,8 @@
+{
+  "name": "MateriasUG",
+  "app_id": "3f1a17d5",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
