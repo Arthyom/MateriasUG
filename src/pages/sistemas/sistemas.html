@@ -1,0 +1,28 @@
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Ing. en Sistemas Computacionales</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h6>Toque para ver las materias que conforman la UDA</h6>
+  <ion-card>
+    <ion-card-header>
+      Areas de Aprendizaje
+    </ion-card-header>
+  
+    <ion-list>
+        <button ion-item *ngFor="let item of items" >
+            <ion-icon name="cube" item-start></ion-icon>
+            <div class="item-note" item-start>
+              {{item.area}}
+            </div>
+        </button>      
+    </ion-list>
+  </ion-card>
+
+</ion-content>

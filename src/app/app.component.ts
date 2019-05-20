@@ -3,8 +3,13 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { HomePage }        from '../pages/home/home';
+import { ListPage }        from '../pages/list/list';
+import { InicioPage }      from '../pages/inicio/inicio';
+import { SistemasPage }    from '../pages/sistemas/sistemas';
+import { ElectronicaPage } from '../pages/electronica/electronica';
+import { GestionPage }     from '../pages/gestion/gestion';
+import { LeiPage }         from '../pages/lei/lei';
 
 @Component({
   templateUrl: 'app.html'
@@ -12,7 +17,7 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = InicioPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -21,8 +26,13 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      //{ title: 'Home',                              component: HomePage },
+      { title: 'Inicio',                            component: InicioPage },
+      { title: 'Ing. Sistemas Computacionales',     component: SistemasPage},
+      { title: 'Ing. Comunicaciones y Electronica', component: ElectronicaPage},
+      { title: 'Lic. Gestion Empresarial',          component: GestionPage},
+      { title: 'Lic. Enseñanza del Ingles',         component: LeiPage},
+      { title: 'List',   component: ListPage }
     ];
 
   }
