@@ -16,7 +16,7 @@
     </ion-card-header>
   
     <ion-list>
-        <button ion-item *ngFor="let item of items" >
+        <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
             <ion-icon name="cube" item-start></ion-icon>
             <div class="item-note" item-start>
               {{item.area}}

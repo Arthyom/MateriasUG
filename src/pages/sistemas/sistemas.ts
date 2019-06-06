@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { UdasPage } from '../udas/udas';
 
 
 @IonicPage()
@@ -11,22 +12,125 @@ export class SistemasPage {
 
   items: Array<{id: string, area: string, UDAS: Array<String>}>;
 
+  /// create six uda's array to store classes for every uda 
+  a1: Array<string> = ['ESPÍRITU EMPRENDEDOR'];
+  a2: Array<string> = ['INTEGRACIÓN A LA VIDA UNIVERSITARIA', 'DESARROLLO HUMANO Y COMUNICACIÓN'];
+  a3: Array<string> = ['FORMACIÓN CULTURAL E INTERCULTURAL',
+  'TALLER TOEFL I',
+  'INGLÉS 4B',
+  'INGLÉS 4A',
+  'INGLÉS 3B',
+  'INGLÉS 3A',
+  'INGLÉS 2B',
+  'INGLÉS 2A',
+  'INGLÉS 1B',
+  'INGLÉS 1A',
+  'FRANCÉS B2.2',
+  'FRANCÉS B2.1',
+  'FRANCÉS B1.2',
+  'FRANCÉS B1.1',
+  'FRANCÉS A2.2',
+  'FRANCÉS A2.1',
+  'FRANCÉS A1.2',
+  'FRANCÉS A1.1',
+  'TALLER TOEFL II',
+  'ALEMÁN I'];
+
+  a4: Array<string> = ['RESPONSABILIDAD SOCIAL'];
+
+  a5: Array<string> = ['CÁLCULO DIFERENCIAL',
+  'ÁLGEBRA LINEAL',
+  'QUÍMICA UNIVERSITARIA',
+  'CÁLCULO INTEGRAL',
+  'PROYECTOS EN INGENIERÍA',
+  'PROBABILIDAD Y ESTADÍSTICA',
+  'CÁLCULO VECTORIAL Y MULTIVARIABLE',
+  'ECUACIONES DIFERENCIALES',
+  'MÉTODOS NUMÉRICOS',
+  'FUNDAMENTOS DE LOS SISTEMAS DE INFORMACIÓN'];
+
+  a6: Array<string> = ['MECÁNICA',
+  'LABORATORIO DE MEDICIONES',
+  'ELECTROMAGNETISMO Y ONDAS',
+  'MATEMÁTICAS DISCRETAS',
+  'PROGRAMACIÓN EN INGENIERÍA',
+  'ALGORITMOS Y ESTRUCTURAS DE DATOS',
+  'FUNDAMENTOS DE LOS SISTEMAS ELÉCTRICOS',
+  'ELECTRÓNICA DIGITAL',
+  'SISTEMAS OPERATIVOS',
+  'PROGRAMACIÓN ORIENTADA A OBJETOS',
+  'ELECTRÓNICA ANALÓGICA',
+  'COMPILADORES',
+  'DESARROLLO DE SOFTWARE',
+  'SISTEMAS DE ADMINISTRACIÓN DE DATOS',
+  'CIRCUITOS INTEGRADOS LINEALES',
+  'INGENIERÍA DE SOFTWARE',
+  'APLICACIONES DE INTERNET',
+  'REDES DE COMPUTADORAS I',
+  'REDES DE COMPUTADORAS II',
+  'MICROPROCESADORES Y MICROCONTROLADORES',
+  'GRÁFICOS POR COMPUTADORA',
+  'GEOMETRÍA COMPUTACIONAL',
+  'PROGRAMACIÓN CIENTÍFICA',
+  'LENGUAJES MODERNOS DE PROGRAMACIÓN',
+  'VISUALIZACIÓN DE INFORMACIÓN',
+  'TÓPICO SELECTO EN SISTEMAS COMPUTACIONALES',
+  'OPTATIVA DISCIPLINAR ISC II',
+  'OPTATIVA DISCIPLINAR ISC I'];
+
+  a7: Array<string> = ['INMERSIÓN EN EL AMBIENTE LABORAL',
+  'SEMINARIO DE PROYECTO DE TITULACIÓN',
+  'INGENIERÍA ECONÓMICA',
+  'INGENIERÍA INDUSTRIAL',
+  'ADMINISTRACIÓN DE PROYECTO DE TESIS',
+  'REDACCIÓN DE ARTÍCULOS CIENTÍFICOS EN INGLÉS',
+  'REDACCIÓN DE CV Y ENTREVISTA DE TRABAJO',
+  'EXPRESIÓN VERBAL EN AMBIENTE PROFESIONAL',
+  'OPTATIVA COMPLEMENTARIA ISC'];
+
+
+  a8: Array<string> = ['ADMINISTRACIÓN DE LA TECNOLOGÍA INFORMATICA',
+  'INFORMÁTICA INDUSTRIAL',
+  'INTELIGENCIA ARTIFICIAL',
+  'SISTEMAS DE INFORMACIÓN',
+  'SEGURIDAD EN REDES',
+  'COMUNICACIONES DIGITALES',
+  'COMPUTO EN LA NUBE',
+  'ALMACENES DE DATOS',
+  'MINERÍA DE DATOS',
+  'TÓPICO SELECTO DE SISTEMAS DE INFORMACIÓN',
+  'RECONOCIMIENTO DE PATRONES',
+  'ROBÓTICA MÓVIL',
+  'VISIÓN POR COMPUTADORA',
+  'COMPUTACIÓN FLEXIBLE',
+  'TÓPICO SELECTO DE INTELIGENCIA ARTIFICIAL Y ROBÓTICA',
+  'SISTEMAS DIGITALES',
+  'FILTRADO DIGITAL',
+  'ALGORITMOS DE PROCESAMIENTO DIGITAL DE SEÑALES',
+  'INSTRUMENTACIÓN COMPUTARIZADA',
+  'DESARROLLO DE SOFTWARE PARA SISTEMAS DE CONTROL',
+  'TÓPICO SELECTO EN INFORMÁTICA INDUSTRIAL',
+  'OPTATIVA DE PROFUNDIZACIÓN III',
+  'OPTATIVA DE PROFUNDIZACIÓN II',
+  'OPTATIVA DE PROFUNDIZACIÓN I'
+];
+  
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.items = [];
-    this.items.push({ id: '1', area: 'CREATIVIDAD Y ESPIRITU EMPRENDEDOR', UDAS:['hola', 'hola'] });
-    this.items.push({ id: '2', area: 'DESARROLLO PERSONAL', UDAS: ['hola', 'hola']});
-    this.items.push({ id: '3', area: 'FORMACIÓN CULTURAL E INTERCULTURAL', UDAS: ['hola', 'hola']});
-    this.items.push({ id: '4', area: 'RESPONSABILIDAD SOCIAL', UDAS:['hola', 'hola']});
-    this.items.push({ id: '5', area: 'BÁSICA COMÚN', UDAS:['hola', 'hola']});
-    this.items.push({ id: '6', area: 'COMPLEMENTARIA', UDAS: ['hola', 'hola']});
-    this.items.push({ id: '7', area: 'BÁSICA DISCIPLINAR', UDAS: ['hola', 'hola']});
-    this.items.push({ id: '8', area: 'PROFUNDIZACIÓN', UDAS: ['hola', 'hola']});
+    this.items.push({ id: '1', area: 'CREATIVIDAD Y ESPIRITU EMPRENDEDOR',   UDAS: this.a1});
+    this.items.push({ id: '2', area: 'DESARROLLO PERSONAL',                  UDAS: this.a2});
+    this.items.push({ id: '3', area: 'FORMACIÓN CULTURAL E INTERCULTURAL',   UDAS: this.a3});
+    this.items.push({ id: '4', area: 'RESPONSABILIDAD SOCIAL',               UDAS: this.a4});
+    this.items.push({ id: '5', area: 'BÁSICA COMÚN',                         UDAS: this.a5});
+    this.items.push({ id: '6', area: 'COMPLEMENTARIA',                       UDAS: this.a6});
+    this.items.push({ id: '7', area: 'BÁSICA DISCIPLINAR',                   UDAS: this.a7});
+    this.items.push({ id: '8', area: 'PROFUNDIZACIÓN',                       UDAS: this.a8});
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SistemasPage');
+  itemTapped(event, item) {
+    // That's right, we're pushing to ourselves!
+    this.navCtrl.push(UdasPage, {item: item});
   }
-
 }

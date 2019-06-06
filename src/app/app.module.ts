@@ -10,7 +10,7 @@ import { SistemasPage } from '../pages/sistemas/sistemas';
 import { ElectronicaPage } from '../pages/electronica/electronica';
 import { GestionPage }     from '../pages/gestion/gestion';
 import { LeiPage }         from '../pages/lei/lei';
-
+import { UdasPage}         from '../pages/udas/udas';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -25,6 +25,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ElectronicaPage,
     GestionPage,
     LeiPage,
+    UdasPage,
     InicioPage
   ],
   imports: [
@@ -40,6 +41,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ElectronicaPage,
     LeiPage,
     GestionPage,
+    UdasPage,
     InicioPage
   ],
   providers: [
